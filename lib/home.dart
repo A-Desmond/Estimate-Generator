@@ -48,6 +48,7 @@ class _HomePageState extends ConsumerState<HomePage> {
         quantity: quantity,
         totalCost: totalPerItem,
       ));
+      print(totalCost);
       int value = totalCost.fold(
           0, (previousValue, element) => previousValue + element);
       sum = value;
@@ -60,6 +61,11 @@ class _HomePageState extends ConsumerState<HomePage> {
 
   removeEstimate(int index) {
     estimateList.removeAt(index);
+    totalCost.removeAt(index);
+    print(totalCost);
+    int value =
+        totalCost.fold(0, (previousValue, element) => previousValue + element);
+    sum = value;
   }
 
   @override

@@ -16,7 +16,7 @@ class MyApp extends ConsumerWidget {
         debugShowCheckedModeBanner: false,
         title: 'Everlasting shop',
         theme: ref.watch(themesettingsProvider).state(ref: ref),
-        themeMode: ThemeMode.system,
+       // themeMode: ThemeMode.system,
         home: const HomePage());
   }
 }
